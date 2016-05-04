@@ -1,0 +1,17 @@
+- flash.each do |key, value|
+  - if key == "alert"
+    .bg-warning.flash
+      .container
+        = value
+  - elsif key == "success"
+    .bg-success.flash
+      .container
+        = value
+  - elsif key == "error"
+    .bg-danger.flash
+      .container
+        = value
+  - elsif key == "notice"
+    .bg-info.flash
+      .container
+        = value
