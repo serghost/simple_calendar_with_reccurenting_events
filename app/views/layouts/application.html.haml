@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title= Календарь
+    %title Календарь
     = favicon_link_tag 'favicon.ico'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
@@ -10,5 +10,12 @@
   %body
     %header
       = render "shared/flash_messages"
+      .container
+        .row
+
+        .row
+          .col-lg-4.col-md-4.col-sm-6.hidden-xs
+            = render "shared/user_actions"
     %main
-      = yield
+      .container
+        = yield

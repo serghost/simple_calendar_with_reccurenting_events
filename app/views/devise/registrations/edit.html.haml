@@ -10,6 +10,10 @@
     %div
       Currently waiting confirmation for: #{resource.unconfirmed_email}
   .field
+    = f.label :fullname
+    %br/
+    = f.text_field :fullname
+  .field
     = f.label :password
     %i (leave blank if you don't want to change it)
     %br/
@@ -21,7 +25,7 @@
   .field
     = f.label :current_password
     %i (we need your current password to confirm your changes)
-    %br/
+    %br
     = f.password_field :current_password, autocomplete: "off"
   .actions
     = f.submit "Update"

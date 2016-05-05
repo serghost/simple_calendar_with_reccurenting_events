@@ -46,9 +46,14 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    autoprefixer-rails (6.3.6)
+      execjs
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.5)
     coffee-rails (4.1.1)
@@ -152,6 +157,8 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     sexp_processor (4.7.0)
+    simple_calendar (2.1.1)
+      rails (>= 3.0)
     spring (1.7.1)
     sprockets (3.6.0)
       concurrent-ruby (~> 1.0)
@@ -182,6 +189,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
+  bootstrap-sass (~> 3.3.6)
   byebug
   devise
   devise-i18n
@@ -193,6 +202,7 @@ DEPENDENCIES
   rails-i18n!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  simple_calendar (~> 2.0)
   spring
   sqlite3
   turbolinks
