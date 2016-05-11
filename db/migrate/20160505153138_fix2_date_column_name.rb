@@ -4,7 +4,7 @@ class Fix2DateColumnName < ActiveRecord::Migration
     remove_column :events, :start_time, :datetime
     execute <<-SQL
       ALTER TABLE "events" ALTER COLUMN "date" TYPE timestamp
-      USING ('2000-1-1'::date + date)
+      USING ('2000-1-1'::date)
     SQL
   end
 end
