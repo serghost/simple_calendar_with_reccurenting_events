@@ -7,6 +7,7 @@ gem 'recurrence'
 gem 'rails', '4.2.5.1'
 gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'rails-4-x' # I18n support
 
+#gem 'sqlite3'
 gem 'pg'
 # UI
 gem 'sass-rails', '~> 5.0'
