@@ -1,12 +1,11 @@
-class CreateEvents < ActiveRecord::Migration
+class AddEvents < ActiveRecord::Migration
   def change
     create_table :events do |t|
-      t.belongs_to :calendar, index: true
       t.belongs_to :user, index: true
       t.string :title
-      t.string :date
+      t.datetime :date
       t.string :repeat
-
+      t.string :tag
       t.timestamps null: false
     end
   end

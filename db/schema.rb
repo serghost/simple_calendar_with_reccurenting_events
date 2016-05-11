@@ -11,34 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160506141417) do
-
-  create_table "calendars", force: :cascade do |t|
-    t.string   "title"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
+ActiveRecord::Schema.define(version: 20160511160624) do
 
   create_table "events", force: :cascade do |t|
+    t.integer  "user_id"
     t.string   "title"
     t.datetime "date"
     t.string   "repeat"
+    t.string   "tag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "tag"
-    t.integer  "user_id"
   end
 
   add_index "events", ["user_id"], name: "index_events_on_user_id"
 
   create_table "repeats", force: :cascade do |t|
-    t.string   "title"
     t.integer  "event_id"
+    t.string   "title"
+    t.datetime "date"
+    t.string   "tag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date     "date"
-    t.string   "tag"
   end
 
   add_index "repeats", ["event_id"], name: "index_repeats_on_event_id"
@@ -57,7 +50,6 @@ ActiveRecord::Schema.define(version: 20160506141417) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "fullname"
-    t.string   "time_zone"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
