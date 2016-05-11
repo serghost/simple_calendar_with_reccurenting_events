@@ -1,2 +1,9 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+%h2 Calendar app with autorization
+%p.text-muted Вы просматриваете общий для всех пользователей календарь
+
+= month_calendar events: @events do |date, events|
+  = date
+
+  - events.each do |event|
+    %div{class:"#{event.view_class}"}
+      = event.title

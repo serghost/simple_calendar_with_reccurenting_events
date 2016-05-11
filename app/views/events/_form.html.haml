@@ -6,19 +6,24 @@
         - @event.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
+  .field.form-group
     = f.label :title
     = f.text_field :title
-  .field
+  .field.form-group
+    = f.label :tag
+    = f.select :tag, options_for_select(Event::COLOR_TAG)
+  .field.form-group
     = f.label :date
-    = f.text_field :date
-  .field
+    = f.date_select :date
+  .field.form-group
     = f.label :repeat
     = f.select :repeat, options_for_select(Event::REPEAT)
-  .field
-    = f.label :calendar
-    = f.collection_select :calendar, Calendar.all, :id, :title, prompt: true
+  .field.form-group
 
+
+
+    - if user_signed_in?
+      = f.hidden_field :user_id, value: current_user.id
 
   .actions
-    = f.submit 'Save'
+    = f.submit 'Сохранить', class: "btn btn-lg btn-primary"

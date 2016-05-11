@@ -1,3 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "home";
+@import "events";
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    a, .dropdown {
+        padding-left: 20px;
+    }
+}
+

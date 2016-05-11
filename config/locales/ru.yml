@@ -1,0 +1,15 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        current_password: "Текущий пароль"
+        email:
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        remember_me: "Запомнить меня"
+
+      event:
+        title: "Название"
+        tag: "Тег"
+        date: "Дата"
+        repeat: "Повторять:"

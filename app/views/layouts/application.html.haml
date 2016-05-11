@@ -11,11 +11,12 @@
     %header
       = render "shared/flash_messages"
       .container
-        .row
 
-        .row
-          .col-lg-4.col-md-4.col-sm-6.hidden-xs
-            = render "shared/user_actions"
+        %nav.navbar.navbar-default
+          = render "shared/user_actions"
+
+          = render "shared/menu"
     %main
+
       .container
         = yield

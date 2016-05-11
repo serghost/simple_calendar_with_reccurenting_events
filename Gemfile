@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "simple_calendar", "~> 2.0"
+gem 'recurrence'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -24,7 +26,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'devise-i18n'
 
-gem "simple_calendar", "~> 2.0"
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

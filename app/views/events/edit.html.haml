@@ -1,7 +1,7 @@
-%h1 Editing event
+%h2 Редактирование
 
 = render 'form'
 
-= link_to 'Show', @event
-\|
-= link_to 'Back', events_path
+= link_to "Удалить", event_path, method: :delete, class: "btn btn-danger"
+
+= link_to 'Назад', events_path, class: "btn btn-default"

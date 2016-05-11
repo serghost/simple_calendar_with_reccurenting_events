@@ -1,25 +1,10 @@
-%h1 Listing events
+%h2 Личный календарь
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Date
-      %th Repeat
-      %th
-      %th
-      %th
+= month_calendar events: @personal_events do |date, events|
+  = date
 
-  %tbody
-    - @events.each do |event|
-      %tr
-        %td= event.title
-        %td= event.date
-        %td= event.repeat
-        %td= link_to 'Show', event
-        %td= link_to 'Edit', edit_event_path(event)
-        %td= link_to 'Destroy', event, :method => :delete, :data => { :confirm => 'Are you sure?' }
+  - events.each do |event|
+    %div{class:"#{event.view_class}"}
+      = link_to "#{event.title}", edit_event_path(event.event_id)
 
-%br
-
-= link_to 'New Event', new_event_path
+= link_to 'Новое событие', new_event_path, class: "btn btn-success"
