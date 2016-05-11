@@ -6,9 +6,8 @@ gem 'recurrence'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'rails-4-x' # I18n support
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
+gem 'pg'
 # UI
 gem 'sass-rails', '~> 5.0'
 gem 'haml'
@@ -55,3 +54,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+gem 'rails_12factor', group: :production
+
+ruby "2.3.0"
